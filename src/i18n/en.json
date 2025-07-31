@@ -1,0 +1,71 @@
+{
+  "title": "Nepali Events Calendar",
+  "subtitle": "Manage your events in both Nepali and English",
+  "language": "Language",
+  "english": "English",
+  "nepali": "Nepali",
+  "weekdays": {
+    "sunday": "Sun",
+    "monday": "Mon",
+    "tuesday": "Tue",
+    "wednesday": "Wed",
+    "thursday": "Thu",
+    "friday": "Fri",
+    "saturday": "Sat"
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  },
+  "nepaliMonths": {
+    "baisakh": "Baisakh",
+    "jestha": "Jestha",
+    "asar": "Asar",
+    "shrawan": "Shrawan",
+    "bhadra": "Bhadra",
+    "aswin": "Aswin",
+    "kartik": "Kartik",
+    "mangsir": "Mangsir",
+    "poush": "Poush",
+    "magh": "Magh",
+    "falgun": "Falgun",
+    "chaitra": "Chaitra"
+  },
+  "events": {
+    "title": "Events",
+    "addEvent": "Add Event",
+    "eventTitle": "Event Title",
+    "eventDescription": "Event Description",
+    "add": "Add",
+    "noEvents": "No events for this day",
+    "close": "Close"
+  },
+  "sampleEvents": {
+    "dashain": {
+      "title": "Dashain Festival",
+      "description": "The biggest festival of Nepal, celebrating victory of good over evil"
+    },
+    "tihar": {
+      "title": "Tihar Festival",
+      "description": "Festival of lights, celebrating the bond between brothers and sisters"
+    },
+    "independence": {
+      "title": "Independence Day",
+      "description": "Celebrating Nepal's independence and sovereignty"
+    },
+    "republic": {
+      "title": "Republic Day",
+      "description": "Commemorating the establishment of the Federal Democratic Republic of Nepal"
+    }
+  }
+}
