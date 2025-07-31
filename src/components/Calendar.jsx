@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { getCalendarDays, getNepaliMonthName } from '../utils/nepaliDate';
+import { getCalendarDays, getNepaliMonthName, getNepaliDate } from '../utils/nepaliDate';
 import CalendarDay from './CalendarDay';
 import EventsModal from './EventsModal';
 
@@ -46,8 +46,9 @@ function Calendar({ currentDate, setCurrentDate, events, addEvent }) {
 
   const getCurrentMonthDisplay = () => {
     if (i18n.language === 'ne') {
-      const nepaliMonth = getNepaliMonthName(currentMonth, 'ne');
-      return `${nepaliMonth} ${currentYear + 57}`; // Add 57 for BS year
+      const nepaliDate = getNepaliDate(currentDate);
+      const nepaliMonth = getNepaliMonthName(nepaliDate.month, 'ne');
+      return `${nepaliMonth} ${nepaliDate.year}`;
     }
     return `${t(`months.${months[currentMonth]}`)} ${currentYear}`;
   };
