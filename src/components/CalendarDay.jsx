@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { getNepaliDate } from '../utils/nepaliDate';
+import { getNepaliDate, getDaysInNepaliMonth } from '../utils/nepaliDate';
 
 function CalendarDay({ day, events, onClick }) {
   const { t, i18n } = useTranslation();
@@ -22,6 +22,17 @@ function CalendarDay({ day, events, onClick }) {
   };
 
   const formatNepaliDate = (nepaliDate) => {
+    // Validate that the Nepali date is within reasonable bounds
+    if (nepaliDate.day < 1 || nepaliDate.day > 32 || nepaliDate.month < 0 || nepaliDate.month > 11) {
+      return '';
+    }
+    
+    // Ensure the day is valid for the specific month
+    const maxDays = getDaysInNepaliMonth(nepaliDate.year, nepaliDate.month);
+    if (nepaliDate.day > maxDays) {
+      return '';
+    }
+    
     if (i18n.language === 'ne') {
       return `${nepaliDate.day}`;
     }
